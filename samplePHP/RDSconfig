@@ -1,0 +1,30 @@
+EnvironmentConfigurationMetadata:
+  DateCreated: '1529987242000'
+  DateModified: '1529987242000'
+Platform:
+  PlatformArn: arn:aws:elasticbeanstalk:us-east-1::platform/PHP 7.1 running on 64bit Amazon Linux/2.7.1
+OptionSettings:
+  AWSEBAutoScalingGroup.aws:autoscaling:asg:
+    MaxSize: '1'
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+  aws:elasticbeanstalk:healthreporting:system:
+    SystemType: enhanced
+  aws:autoscaling:launchconfiguration:
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+  AWSEBAutoScalingLaunchConfiguration.aws:autoscaling:launchconfiguration:
+    EC2KeyName: macNv
+  aws:rds:dbinstance:
+    DBPassword: aayush123456789
+    DBInstanceClass: db.r3.large
+    DBEngine: postgres
+    DBUser: aayush
+    DBDeletionPolicy: Snapshot
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+Extensions:
+  RDS.EBConsoleSnippet:
+    Order: null
+    SourceLocation: https://s3.amazonaws.com/elasticbeanstalk-env-resources-us-east-1/eb_snippets/rds/rds.json
+AWSConfigurationTemplateVersion: 1.1.0.0
